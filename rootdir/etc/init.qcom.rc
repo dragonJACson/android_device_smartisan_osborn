@@ -908,20 +908,21 @@ service mlid /vendor/bin/mlid
     group gps
     socket mlid stream 0666 gps gps
 
-service loc_launcher /system/vendor/bin/loc_launcher
-    #loc_launcher will start as root and set its uid to gps
+service vendor.loc_launcher /system/vendor/bin/loc_launcher
     class late_start
-    group gps inet diag wifi
+    user gps
+    group gps
+    writepid /dev/cpuset/system-background/tasks
 
 on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
+    insmod /system/lib/modules/qce.ko
+    insmod /system/lib/modules/qcedev.ko
 
 service drmdiag /system/vendor/bin/drmdiagapp
     class late_start
-     user root
-     disabled
-     oneshot
+    user root
+    disabled
+    oneshot
 
 on property:drmdiag.load=1
     start drmdiag
@@ -957,10 +958,10 @@ service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     oneshot
 
 service wifi-crda /vendor/bin/init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
+    class late_start
+    user root
+    disabled
+    oneshot
 
 on property:sys.boot_completed=1
     start qcom-post-boot
