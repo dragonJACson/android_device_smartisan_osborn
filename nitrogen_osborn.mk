@@ -21,13 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from osborn device
 $(call inherit-product, device/smartisan/osborn/device.mk)
 
-# Inherit some common MK stuff.
-$(call inherit-product, vendor/mk/config/common_full_phone.mk)
+# Inherit some common Nitrogen stuff.
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=XiNGRZ
-
-PRODUCT_NAME := mk_osborn
+PRODUCT_NAME := nitrogen_osborn
 PRODUCT_BRAND := Smartisan
 PRODUCT_DEVICE := osborn
 PRODUCT_MANUFACTURER := smartisan
@@ -47,3 +44,9 @@ PRODUCT_SUPPORTS_VERITY := true
 PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/testkey
 
 TARGET_VENDOR := Smartisan
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
+
+PRODUCT_SOONG_NAMESPACES := hardware/qcom/display-caf-msm8998

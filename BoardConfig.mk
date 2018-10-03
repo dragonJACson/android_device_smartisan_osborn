@@ -62,7 +62,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/smartisan/sdm660
-TARGET_KERNEL_CONFIG := mokee_osborn_defconfig
+TARGET_KERNEL_CONFIG := nos_osborn_defconfig
 # TARGET_KERNEL_CLANG_COMPILE := true
 
 # HAX: SELinux Permissive - Remove ASAP
@@ -75,6 +75,7 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Audio
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8998
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
@@ -113,6 +114,7 @@ AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 AUDIO_FEATURE_ENABLED_USB_TUNNEL_AUDIO := true
 AUDIO_FEATURE_ENABLED_SPLIT_A2DP := true
 AUDIO_FEATURE_ENABLED_RAS := true
+AUDIO_FEATURE_ENABLED_PERF_HINTS := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -127,8 +129,10 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
-TARGET_LD_SHIM_LIBS += /vendor/lib/hw/camera.sdm660.so|/vendor/lib/libshim_camera.so
-TARGET_LD_SHIM_LIBS += /vendor/lib/libmmcamera_ppeiscore.so|/vendor/lib/libshim_camera.so
+# TODO: Move these back here when we add support for TARGET_LD_SHIM_LIBS
+# For now they are set in init.qcom.rc
+#TARGET_LD_SHIM_LIBS += /vendor/lib/hw/camera.sdm660.so|/vendor/lib/libshim_camera.so
+#TARGET_LD_SHIM_LIBS += /vendor/lib/libmmcamera_ppeiscore.so|/vendor/lib/libshim_camera.so
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -136,8 +140,8 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 WITH_MOKEE_CHARGER := false
 
 # MK Hardware
-BOARD_HARDWARE_CLASS += hardware/mokee/mkhw
-BOARD_USES_MOKEE_HARDWARE := true
+#BOARD_HARDWARE_CLASS += hardware/mokee/mkhw
+#BOARD_USES_MOKEE_HARDWARE := true
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -146,6 +150,7 @@ BOARD_USES_QCNE := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Display
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8998
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
@@ -191,6 +196,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8998
 
 # NFC
 TARGET_USES_NQ_NFC := true
@@ -213,11 +219,26 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Recovery
+#TARGET_NO_RECOVERY := true # Skip building recovery for now
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 BOARD_SUPPRESS_EMMC_WIPE := true
+
+# TWRP specific build flags
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_TWRPAPP := true
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_NTFS_3G := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_THEME := portrait_hdpi
+TW_IGNORE_MISC_WIPE_DATA := true
 
 # RIL
 TARGET_RIL_VARIANT := caf

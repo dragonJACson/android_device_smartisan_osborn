@@ -37,6 +37,8 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    # Set shim path here, we don't support TARGET_LD_SHIM_LIBS yet
+    export LD_SHIM_LIBS /vendor/lib/hw/camera.sdm660.so|/vendor/lib/libshim_camera.so:/vendor/lib/libmmcamera_ppeiscore.so|/vendor/lib/libshim_camera.so:/system/vendor/lib/hw/camera.sdm660.so|/vendor/lib/libshim_camera.so:/system/vendor/lib/libmmcamera_ppeiscore.so|/vendor/lib/libshim_camera.so
     # Set permissions for persist partition
     mkdir /persist 0771 root system
 
