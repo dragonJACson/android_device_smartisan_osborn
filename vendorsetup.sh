@@ -1,2 +1,3 @@
 add_lunch_combo nitrogen_osborn-userdebug
 add_lunch_combo nitrogen_osborn-user
+add_lunch_combo nitrogen_osborn-eng
