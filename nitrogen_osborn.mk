@@ -49,4 +49,7 @@ TARGET_VENDOR := Smartisan
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_SOONG_NAMESPACES := hardware/qcom/display-caf-msm8998
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/display-caf-msm8998 \
+    hardware/qcom/audio-caf-msm8998 \
+    hardware/qcom/media-caf-msm8998

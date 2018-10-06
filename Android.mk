@@ -27,6 +27,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),osborn)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call all-makefiles-under,vendor/smartisan/osborn)
 
 include $(CLEAR_VARS)
 

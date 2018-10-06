@@ -533,6 +533,7 @@ vendor/lib64/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk
+-framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/SVIService/SVIService.apk
 etc/permissions/embms.xml
@@ -541,7 +542,6 @@ etc/permissions/telephonyservice.xml
 framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
 framework/qcrilhook.jar
-vendor/Diag.cfg
 vendor/bin/ATFWD-daemon
 vendor/bin/diag_callback_sample
 vendor/bin/diag_dci_sample
@@ -563,6 +563,7 @@ vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
+vendor/lib/liboemaids_vendor.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libqcmaputils.so
@@ -582,6 +583,7 @@ vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.radio.uim@1.1_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/lib64/libSubSystemShutdown.so
@@ -590,6 +592,7 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
+vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
@@ -609,6 +612,7 @@ vendor/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.1_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
@@ -662,6 +666,7 @@ vendor/lib/lib-rtpcommon.so
 vendor/lib/lib-rtpcore.so
 vendor/lib/lib-rtpdaemoninterface.so
 vendor/lib/lib-rtpsl.so
+vendor/lib/lib-siputility.so
 vendor/lib/lib-uceservice.so
 vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
@@ -679,6 +684,7 @@ vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib-rtpsl.so
+vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
@@ -687,9 +693,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
-vendor/lib/libthermalfeature.so
 vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalfeature.so
 vendor/lib64/libthermalioctl.so
 
 # Time services
