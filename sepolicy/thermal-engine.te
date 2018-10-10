@@ -1,5 +1,6 @@
 allow thermal-engine sysfs_uio:dir rw_dir_perms;
 allow thermal-engine sysfs_uio:file rw_file_perms;
+allow thermal-engine sysfs_uio:lnk_file rw_file_perms
 allow thermal-engine sysfs_uio_file:dir rw_dir_perms;
 allow thermal-engine sysfs_uio_file:file rw_file_perms;
 allow thermal-engine sysfs_uio_file:lnk_file rw_file_perms;
