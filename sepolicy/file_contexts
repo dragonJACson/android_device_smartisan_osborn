@@ -13,7 +13,7 @@
 /sys/devices/soc/soc:fpc1020.*/wakeup_enable u:object_r:sysfs_fpc_dev:s0
 
 # Light
-/vendor/bin/hw/android.hardware.light@2.0-service.osborn u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android.hardware.light@2.0-service.osborn u:object_r:hal_light_default_exec:s0
 
 # HVDCP
 /sys/devices(/platform)?/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/[a-z0-9]+\.i2c:qcom,[a-z0-9]+@[a-z0-9]:qcom,smb[a-z0-9]+-parallel-slave@[0-9]+/power_supply/parallel(/.*)? u:object_r:sysfs_usb_supply:s0
