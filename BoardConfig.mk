@@ -65,8 +65,8 @@ TARGET_KERNEL_SOURCE := kernel/smartisan/sdm660
 TARGET_KERNEL_CONFIG := nos_osborn_defconfig
 # TARGET_KERNEL_CLANG_COMPILE := true
 
-# HAX: SELinux Permissive - Remove ASAP
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# SELinux
+BOARD_KERNEL_CMDLINE += androidboot.selinux=enforcing
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -252,7 +252,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 VENDOR_SECURITY_PATCH := 2018-04-05
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor-minimal
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true

@@ -1,0 +1,19 @@
+# Video4linux sysfs nodes
+/sys/devices/soc/ca00000\.qcom,msm-cam/video4linux/video0(/.*)? u:object_r:sysfs_graphics:s0
+/sys/devices/soc/caa0000\.qcom,jpeg/video4linux/video1(/.*)?   u:object_r:sysfs_graphics:s0
+/sys/devices/soc/c900000\.qcom,mdss_rotator/video4linux/video2(/.*)? u:object_r:sysfs_graphics:s0
+/sys/devices/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@2/video4linux/video4/name u:object_r:sysfs_graphics:s0
+
+# Camera
+/sys/bus/platform/drivers/nxu8010/.* u:object_r:sysfs_camera:s0
+
+# Fingerprint
+/sys/devices/soc/soc:fpc1020.*/irq u:object_r:sysfs_fpc_dev:s0
+/sys/devices/soc/soc:fpc1020.*/hw_reset u:object_r:sysfs_fpc_dev:s0
+/sys/devices/soc/soc:fpc1020.*/wakeup_enable u:object_r:sysfs_fpc_dev:s0
+
+# Light
+/vendor/bin/hw/android.hardware.light@2.0-service.osborn u:object_r:hal_fingerprint_default_exec:s0
+
+# HVDCP
+/sys/devices(/platform)?/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/[a-z0-9]+\.i2c:qcom,[a-z0-9]+@[a-z0-9]:qcom,smb[a-z0-9]+-parallel-slave@[0-9]+/power_supply/parallel(/.*)? u:object_r:sysfs_usb_supply:s0

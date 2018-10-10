@@ -1,0 +1,2 @@
+# TODO: Replace this with more specific domain
+allow vendor_pd_mapper vfat:file rw_file_perms;

@@ -1,0 +1,2 @@
+allow vendor_per_mgr per_mgr_service:service_manager { add find };
+allow vendor_per_mgr servicemanager:binder { call transfer };

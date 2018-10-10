@@ -1,0 +1,2 @@
+allow hal_gnss_qti servicemanager:binder { call };
+allow hal_gnss_qti per_mgr_service:service_manager { find add };

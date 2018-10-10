@@ -1,0 +1,5 @@
+# Fingerprint
+type sysfs_fpc_dev, sysfs_type, fs_type;
+
+# Camera
+type sysfs_camera, sysfs_type, fs_type;

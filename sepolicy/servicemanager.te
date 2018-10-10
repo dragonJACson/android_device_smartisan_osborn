@@ -1,0 +1,12 @@
+allow servicemanager hal_gnss_qti:dir r_dir_perms;
+allow servicemanager hal_gnss_qti:file r_file_perms;
+allow servicemanager hal_gnss_qti:process { getattr };
+allow servicemanager wcnss_service:file rw_file_perms;
+allow servicemanager wcnss_service:dir rw_dir_perms;
+allow servicemanager wcnss_service:process { getattr };
+allow servicemanager vendor_per_mgr:dir r_dir_perms;
+allow servicemanager vendor_per_mgr:file r_file_perms;
+allow servicemanager vendor_per_mgr:process { getattr };
+allow servicemanager rild:dir r_dir_perms;
+allow servicemanager rild:file r_file_perms;
+allow servicemanager rild:process { getattr };

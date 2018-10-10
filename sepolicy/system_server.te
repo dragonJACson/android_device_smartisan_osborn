@@ -1,0 +1,6 @@
+# TODO: Remove this
+# We might have some process running in the `init` context when it shouldn't
+# and system_server can't use binder with `init`
+# And also ANT service requires loading dex files from /data
+permissive system_server;
+

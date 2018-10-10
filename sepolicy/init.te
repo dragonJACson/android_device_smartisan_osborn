@@ -1,0 +1,6 @@
+# For LD_SHIM_LIBS
+allow init { domain -lmkd -crash_dump }:process noatsecure;
+
+# Allow init to do anything for now (TODO: Refactor all init scripts and remove this)
+permissive init;
+

@@ -1,0 +1,7 @@
+allow wcnss_service sysfs:file r_file_perms;
+allow wcnss_service media_rw_data_file:file create_file_perms;
+allow wcnss_service media_rw_data_file:dir create_dir_perms;
+allow wcnss_service per_mgr_service:service_manager { add find };
+allow wcnss_service servicemanager:binder { call };
+allow wcnss_service wifi_data_file:file create_file_perms;
+allow wcnss_service wifi_data_file:dir create_dir_perms;

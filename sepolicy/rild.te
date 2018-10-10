@@ -1,0 +1,2 @@
+allow rild per_mgr_service:service_manager { add find };
+allow rild servicemanager:binder { call };
