@@ -65,8 +65,13 @@ TARGET_KERNEL_SOURCE := kernel/smartisan/sdm660
 TARGET_KERNEL_CONFIG := nos_osborn_defconfig
 # TARGET_KERNEL_CLANG_COMPILE := true
 
-# SELinux
-BOARD_KERNEL_CMDLINE += androidboot.selinux=enforcing
+# SELinux is permissive for now
+# We should be ready to set it enforcing, but unfortunately
+# The only bug left is that phone call ends immediately after swtching
+# on enforcing mode, without any hint from audit.
+# I suspect that we need `noatsecure` somewhere (the only rule that won't produce any audit messages)
+# but I can't figure out where
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
