@@ -1,3 +1,0 @@
-# TODO: Replace this with more specific domain
-allow ueventd vfat:file r_file_perms;
-allow ueventd vfat:dir r_dir_perms;

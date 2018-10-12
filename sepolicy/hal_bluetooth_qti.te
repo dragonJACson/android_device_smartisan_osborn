@@ -1,3 +1,0 @@
-# TODO: Replace this with more specific domain
-allow hal_bluetooth_qti vfat:file r_file_perms;
-allow hal_bluetooth_qti vfat:dir r_dir_perms;
