@@ -425,8 +425,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# Already included by Nitrogen vendor config
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # Tetheroffload
 PRODUCT_PACKAGES += \
