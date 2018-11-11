@@ -1,0 +1,4 @@
+# Temporary hack to try to fix Wi-Fi on some devices
+# I cannot reproduce the bug, so this fix is completely blind based on some clues given by users
+# If it is really the problem of rfs_access rules, remove this and replace it with proper sepolicy rules
+permissive rfs_access;
