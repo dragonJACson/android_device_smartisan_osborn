@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nitrogen_osborn.mk
+    $(LOCAL_DIR)/skydragon_osborn.mk

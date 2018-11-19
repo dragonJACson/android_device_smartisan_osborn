@@ -63,7 +63,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/smartisan/sdm660
 TARGET_KERNEL_CONFIG := nos_osborn_defconfig
-# TARGET_KERNEL_CLANG_COMPILE := truee
+TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=enforcing
 
 # QCOM hardware

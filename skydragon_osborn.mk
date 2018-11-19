@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/smartisan/osborn/device.mk)
 
 # Inherit some common Nitrogen stuff.
-$(call inherit-product, vendor/nitrogen/products/common.mk)
+$(call inherit-product, vendor/skydragon/products/common.mk)
 
-PRODUCT_NAME := nitrogen_osborn
+PRODUCT_NAME := skydragon_osborn
 PRODUCT_BRAND := Smartisan
 PRODUCT_DEVICE := osborn
 PRODUCT_MANUFACTURER := smartisan
