@@ -16,4 +16,5 @@
 
 subdirs = [
     "light",
+    "cryptfs_hw",
 ]
