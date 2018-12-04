@@ -322,13 +322,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-impl \
     vendor.nxp.hardware.nfc@1.0 \
-    vendor.nxp.hardware.nfc@1.0-impl \
     vendor.nxp.hardware.nfc@1.1-service
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     com.gsma.services.nfc \
     com.nxp.nfc.nq \
+    SecureElement \
     libnqnfc-nci \
     nfc_nci.nqx.default.hw \
     libnqp61-jcop-kit \
@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+		$(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 # OMX
