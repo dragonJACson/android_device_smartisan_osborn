@@ -173,9 +173,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libshim_camera \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    vendor.qti.hardware.camera.device@1.0
+    android.frameworks.displayservice@1.0_32 \
+    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-service
 
 PRODUCT_PACKAGES += \
     Snap
@@ -264,8 +264,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0-java
 
 # IFAA (Fingerprint support for Alipay)
-#PRODUCT_BOOT_JARS += \
-#    ifaa_fw
+PRODUCT_BOOT_JARS += \
+    ifaa_fw
 
 # Input
 PRODUCT_COPY_FILES += \
